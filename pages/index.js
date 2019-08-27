@@ -1,6 +1,13 @@
+import Link from 'next/link'
+
 const Index = () => {
   return (
     <div>
+      <Link href='/about'>
+        <a title='about page'>
+          About Page
+        </a>
+      </Link>
       <p>
         Hello Next.js
       </p>
