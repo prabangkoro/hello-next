@@ -13,9 +13,9 @@ const Index = () => {
 
 const PostLink = props => (
   <li>
-    <Link href={`/post?title=${props.title}`}>
+    <Link href={`/p/[id]`} as={`/p/${props.id}`}>
       <a>
-        {props.title}
+        {props.id}
       </a>
     </Link>
   </li>
@@ -28,9 +28,9 @@ const Blog = () => {
         My Blog
       </h1>
       <ul>
-        <PostLink title='Hello Nuxt.js' />
-        <PostLink title='Learn Next.js is awesome' />
-        <PostLink title='Deploy apps with Zeit' />
+        <PostLink id="hello-nextjs" />
+        <PostLink id="learn-nextjs" />
+        <PostLink id="deploy-nextjs" />
       </ul>
     </Layout>
   )
